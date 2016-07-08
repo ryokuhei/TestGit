@@ -1,0 +1,17 @@
+@CHARSET "Windows-31J";
+
+body {
+	background-image:url("./../image/login.jpg");
+
+}
+
+table.input {
+	border:solid;
+	border-width:0.75px;
+	background-color:#b3f5ff;
+}
+td.input {
+	border:solid;
+	border-width:0.75px;
+	background-color:#b3f5ff;
+}
