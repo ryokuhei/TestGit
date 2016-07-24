@@ -24,41 +24,41 @@
 		<p class="title">従業員一覧</p>
 		<table>
 			<tr>
-				<td>従業員コード：</td>
+				<th>従業員コード：</th>
 				<td><input type="text" name="EMPLOYEE_NUMBER"
 					class="validate[required]"></td>
 			</tr>
 			<tr>
-				<td>苗字：</td>
+				<th>苗字：</th>
 				<td><input type="text" name="LAST_NAME"
 					class="validate[required]"></td>
 			</tr>
 			<tr>
-				<td>名前：</td>
+				<th>名前：</th>
 				<td><input type="text" name="FIRST_NAME"
 					class="validate[required]"></td>
 			</tr>
 			<tr>
-				<td>苗字（カナ）：</td>
+				<th>苗字（カナ）：</th>
 				<td><input type="text" name="PHONETIC_LAST_NAME"
 					class="validate[custom[katakana]]"></td>
 			</tr>
 			<tr>
-				<td>名前（カナ）：</td>
+				<th>名前（カナ）：</th>
 				<td><input type="text" name="PHONETIC_FIRST_NAME"
 					class="validate[custom[katakana]]"></td>
 			</tr>
 			<tr>
-				<td>性別：</td>
+				<th>性別：</th>
 				<td><input type="radio" name="SEX" value="0">男 <input
 					type="radio" name="SEX" value="1">女</td>
 			</tr>
 			<tr>
-				<td>生年月日：</td>
+				<th>生年月日：</th>
 				<td><input type="date" name="BIRTH_DAY" placeholder="yyyy-mm-dd"></td>
 			</tr>
 			<tr>
-				<td>所属：</td>
+				<th>所属：</th>
 				<td><select name="SECTION_CODE">
 						<%
 							List<SectionBean> list = (List<SectionBean>) request
@@ -74,7 +74,7 @@
 				</select></td>
 			</tr>
 			<tr>
-				<td>入社日：</td>
+				<th>入社日：</th>
 				<td><input type="date" name="HIRE_DATE" placeholder="yyyy-mm-dd" class="validate[required]"></td>
 			</tr>
 		</table>

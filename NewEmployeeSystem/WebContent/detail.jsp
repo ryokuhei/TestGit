@@ -22,19 +22,19 @@
 	<form action="DetailServlet" method="post">
 		<table>
 			<tr>
-				<td>従業員コード：</td>
+				<th>従業員コード：</th>
 				<td><%=bean.getEmployeeNumber()%></td>
 			</tr>
 			<tr>
-				<td>苗字：</td>
+				<th>苗字：</th>
 				<td><%=bean.getLastName()%></td>
 			</tr>
 			<tr>
-				<td>名前：</td>
+				<th>名前：</th>
 				<td><%=bean.getFirstName()%></td>
 			</tr>
 			<tr>
-				<td>苗字（カナ）：</td>
+				<th>苗字（カナ）：</th>
 				<td>
 					<%
 						String phoneticLastName = bean.getPhoneticLastName();
@@ -49,7 +49,7 @@
 				</td>
 			</tr>
 			<tr>
-				<td>名前（カナ）：</td>
+				<th>名前（カナ）：</th>
 				<td>
 					<%
 						String phoneticFirstName = bean.getPhoneticFirstName();
@@ -62,7 +62,7 @@
 				</td>
 			</tr>
 			<tr>
-				<td>性別：</td>
+				<th>性別：</th>
 				<td>
 					<%
 						if (bean.getSex() == 0) {
@@ -76,7 +76,7 @@
 				</td>
 			</tr>
 			<tr>
-				<td>生年月日：</td>
+				<th>生年月日：</th>
 				<td>
 					<%
 						Date bDay = bean.getBirthDay();
@@ -90,11 +90,11 @@
 				</td>
 			</tr>
 			<tr>
-				<td>部署：</td>
+				<th>部署：</th>
 				<td><%=bean.getSectionName()%></td>
 			</tr>
 			<tr>
-				<td>入社日：</td>
+				<th>入社日：</th>
 				<td>
 					<%
 						Date hDate = bean.getHireDate();

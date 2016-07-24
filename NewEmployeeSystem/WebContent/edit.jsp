@@ -45,22 +45,22 @@
 		%>
 		<table>
 			<tr>
-				<td>従業員コード：</td>
+				<th>従業員コード：</th>
 				<td><input type="text" name="EMPLOYEE_NUMBER"
 					value="<%=bean.getEmployeeNumber()%>" class="validate[required]"></td>
 			</tr>
 			<tr>
-				<td>苗字：</td>
+				<th>苗字：</th>
 				<td><input type="text" name="LAST_NAME"
 					value="<%=bean.getLastName()%>" class="validate[required]"></td>
 			</tr>
 			<tr>
-				<td>名前：</td>
+				<th>名前：</th>
 				<td><input type="text" name="FIRST_NAME"
 					value="<%=bean.getFirstName()%>" class="validate[required]"></td>
 			</tr>
 			<tr>
-				<td>苗字（カナ）：</td>
+				<th>苗字（カナ）：</th>
 				<%
 						String phoneticLastName = bean.getPhoneticLastName();
 						if (phoneticLastName == null) {
@@ -70,7 +70,7 @@
 					value="<%= phoneticLastName%>" class="validate[custom[katakana]]">
 			</tr>
 			<tr>
-				<td>名前（カナ）：</td>
+				<th>名前（カナ）：</th>
 				<td>
 					<%
 						String phoneticFirstName = bean.getPhoneticFirstName();
@@ -81,7 +81,7 @@
 				</td>
 			</tr>
 			<tr>
-				<td>性別：</td>
+				<th>性別：</th>
 				<td>
 					<%
 						int sex = bean.getSex();
@@ -99,7 +99,7 @@
 				</td>
 			</tr>
 			<tr>
-				<td>生年月日：</td>
+				<th>生年月日：</th>
 				<td>
 					<%Date birthDay = bean.getBirthDay();
 				if(birthDay != null) {
@@ -109,7 +109,7 @@
 				</td>
 			</tr>
 			<tr>
-				<td>部署：</td>
+				<th>部署：</th>
 				<td><select name="SECTION_CODE">
 						<option value="<%=bean.getSectionCode()%>"><%=bean.getSectionName()%></option>
 						<%
@@ -123,7 +123,7 @@
 				</select></td>
 			</tr>
 			<tr>
-				<td>入社日：</td>
+				<th>入社日：</th>
 				<td><input type="date" name="HIRE_DATE"
 					value="<%=bean.getHireDate()%>" placeholder="yyyy-mm-dd"
 					class="validate[required]"></td>

@@ -14,8 +14,8 @@
 
 	<table>
 		<tr>
-			<td>ID</td>
-			<td>–¼‘O</td>
+			<th class="vertical">ID</th>
+			<th class="vertical">–¼‘O</th>
 		</tr>
 		<%
 				List<EmployeeBean> list = (List<EmployeeBean>) request
