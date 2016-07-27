@@ -19,8 +19,8 @@ public class ConnectionManager {
 	private Connection connection = null;
 
 	/**
-	 * インスタンス取得（シングルトン）
-	 * @return
+	 * インスタンス取得（シングルトン）メソッド
+	 * @return	自クラスのインスタンス
 	 */
 	public static synchronized ConnectionManager getInstance() {
 		if(instance == null) {
@@ -30,8 +30,8 @@ public class ConnectionManager {
 	}
 
 	/**
-	 * DB接続
-	 * @return
+	 * DBに接続するメソッド
+	 * @return	接続コネクション
 	 * @throws SQLException
 	 */
 	public Connection getConnection() throws SQLException {
@@ -55,7 +55,7 @@ public class ConnectionManager {
 	}
 
 	/**
-	 * DB切断
+	 * DBから切断するメソッド
 	 */
 	public void closeConnection() {
 		if(connection != null) {

@@ -22,13 +22,13 @@ import model.entity.SectionBean;
 public class RagstrationServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public RagstrationServlet() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
+	/**
+	 * @see HttpServlet#HttpServlet()
+	 */
+	public RagstrationServlet() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
@@ -57,19 +57,24 @@ public class RagstrationServlet extends HttpServlet {
 		request.setCharacterEncoding("Windows-31J");
 		response.setCharacterEncoding("Windoows-31J");
 
-		String url = null;
-		int result = 0;
+		String url = null;		// 遷移先URL
+		int result = 0;			// 従業員登録の結果
 
 		/* インスタンス化 */
 		EmployeeBean bean = new EmployeeBean();
 		EmployeeDAO dao = new EmployeeDAO();
 		bean.setAll(request);			// 登録情報をbeanに格納
+
+		/* 登録情報にエラーがある場合 */
 		if(bean.getError().size() == 0) {
-		result = dao.employeeRegistration(bean);
+			result = dao.employeeRegistration(bean);	// 従業員情報を登録
 		}
+
+		/* 従業員情報が登録されなかった場合 */
 		if(result == 0) {
 			request.setAttribute("ERROR", bean.getError());
 			url = "filure_ragstration.jsp";
+		/* 従業員情報が登録された場合 */
 		} else {
 			url = "seccess_ragstration.jsp";
 		}

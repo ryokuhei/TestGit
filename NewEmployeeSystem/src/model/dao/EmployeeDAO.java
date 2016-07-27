@@ -12,8 +12,8 @@ import model.entity.EmployeeBean;
 public class EmployeeDAO {
 
 	/**
-	 * 従業員一覧取得メソッド
-	 * @return
+	 * 従業員一覧情報を取得するメソッド
+	 * @return	従業員一覧リスト
 	 */
 	public List<EmployeeBean> employeeList() {
 		String sql = "SELECT * FROM employee_management_db.employee"
@@ -51,9 +51,9 @@ public class EmployeeDAO {
 	}
 
 	/**
-	 * 従業員削除メソッド
-	 * @param code
-	 * @return
+	 * 従業員情報を削除するメソッド
+	 * @param code	削除する従業員番号
+	 * @return		削除結果
 	 */
 	public int employeeDelete(String code) {
 
@@ -75,8 +75,8 @@ public class EmployeeDAO {
 
 	/**
 	 * 従業員情報を登録するメソッド
-	 * @param bean
-	 * @return
+	 * @param bean	従業員情報
+	 * @return		登録結果
 	 */
 	public int employeeRegistration(EmployeeBean bean) {
 
@@ -188,9 +188,9 @@ public class EmployeeDAO {
 	}
 
 	/**
-	 * 従業員検索
-	 * @param code
-	 * @return
+	 * 従業員を検索するメソッド
+	 * @param code		検索する従業員番号
+	 * @return			検索がヒットした従業員情報
 	 */
 	public EmployeeBean employeeSearch(String code) {
 
@@ -222,6 +222,13 @@ public class EmployeeDAO {
 		return bean;
 
 	}
+
+	/**
+	 * 従業員情報を編集するメソッド
+	 * @param oldCode	編集する従業員番号
+	 * @param bean		編集した従業員情報
+	 * @return			編集結果
+	 */
 	public int employeeEdit(String oldCode, EmployeeBean bean) {
 
 		String sql = "UPDATE employee_management_db.employee SET"
@@ -260,8 +267,9 @@ public class EmployeeDAO {
 	}
 
 	/**
-	 * 従業員コードの重複を検索する
-	 * @return
+	 * 従業員が重複しているか確認するメソッド
+	 * @param employeeNumber	確認する従業員番号
+	 * @return					重複結果
 	 */
 	public boolean empCodeOverlapCheck(String employeeNumber) {
 

@@ -60,11 +60,13 @@ public class DetailServlet extends HttpServlet {
 		request.setCharacterEncoding("Windows-31J");
 		response.setCharacterEncoding("Windows-31J");
 
-		String action = request.getParameter("ACTION");
+		String action = request.getParameter("ACTION");		// 押されたボタンの情報を取得
 		HttpSession session = request.getSession();
 		EmployeeBean bean = (EmployeeBean)session.getAttribute("EMPLOYEE");	// 編集する従業員番号
-		String url = null;
-		int result = 0;
+
+		String url = null;		// 遷移先URL
+		int result = 0;			// 編集/削除した結果
+
 		// 編集ボタンが押された場合
 		if("編集".equals(action)) {
 			SectionDAO sectiondao = new SectionDAO();

@@ -1,6 +1,8 @@
 package model.entity;
 
-public class SectionBean {
+import java.io.Serializable;
+
+public class SectionBean implements Serializable {
 
 	private int sectionCode;		// 部署コード
 	private String sectionName;		// 部署名

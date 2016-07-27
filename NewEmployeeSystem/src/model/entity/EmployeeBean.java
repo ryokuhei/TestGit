@@ -1,5 +1,6 @@
 package model.entity;
 
+import java.io.Serializable;
 import java.sql.Date;
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
@@ -14,8 +15,9 @@ import org.apache.commons.lang3.StringUtils;
 import model.dao.EmployeeDAO;
 import model.dao.SectionDAO;
 
-public class EmployeeBean {
+public class EmployeeBean implements Serializable {
 
+	/* フィールド定義 */
 	private String	employeeNumber;		// 社員番号
 	private String	firstName;			// 苗字
 	private String	lastName;			// 名前
@@ -176,6 +178,7 @@ public class EmployeeBean {
 		return bean;
 	}
 
+	// 以下、getter setter
 	public List<String> getError() {
 		return error;
 	}
